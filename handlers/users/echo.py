@@ -9,7 +9,8 @@ from loader import dp
 async def bot_echo(message: types.Message):
     await message.answer(f"Эхо без состояния."
                          f"Сообщение:\n"
-                         f"{message.text}")
+                         f"{message.text} +++ {message.chat.id}")
+    await message.reply(message.text)
 
 
 # Эхо хендлер, куда летят ВСЕ сообщения с указанным состоянием
